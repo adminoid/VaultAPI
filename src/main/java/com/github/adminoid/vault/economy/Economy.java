@@ -175,7 +175,7 @@ public interface Economy {
     public boolean has(OfflinePlayer player, String worldName, double amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, BigDecimal)} instead.
      */
     @Deprecated
     public EconomyResponse withdrawPlayer(String playerName, BigDecimal amount);
@@ -190,7 +190,7 @@ public interface Economy {
     public EconomyResponse withdrawPlayer(OfflinePlayer player, BigDecimal amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, String, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, String, BigDecimal)} instead.
      */
     @Deprecated
     public EconomyResponse withdrawPlayer(String playerName, String worldName, BigDecimal amount);
