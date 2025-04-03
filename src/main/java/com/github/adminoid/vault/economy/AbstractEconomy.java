@@ -1,4 +1,4 @@
-package net.milkbowl.vault.economy;
+package com.github.adminoid.vault.economy;
 
 import org.bukkit.OfflinePlayer;
 

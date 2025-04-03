@@ -14,7 +14,7 @@
     along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.milkbowl.vault.economy;
+package com.github.adminoid.vault.economy;
 
 import java.math.BigDecimal;
 import java.util.List;
