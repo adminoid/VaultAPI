@@ -24,9 +24,9 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 	</organization>
 
 	<scm>
-		<url>https://github.com/MilkBowl/VaultAPI</url>
-		<connection>scm:git:git://github.com:MilkBowl/VaultAPI.git</connection>
-		<developerConnection>scm:git:git@github.com:MilkBowl/VaultAPI.git</developerConnection>
+		<url>https://github.com/adminoid/VaultAPI</url>
+		<connection>scm:git:git://github.com:adminoid/VaultAPI.git</connection>
+		<developerConnection>scm:git:git@github.com:adminoid/VaultAPI.git</developerConnection>
 	</scm>
 
 	<ciManagement>
