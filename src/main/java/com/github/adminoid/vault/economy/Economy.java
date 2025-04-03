@@ -290,7 +290,7 @@ public interface Economy {
      * @param amount to deposit
      * @return EconomyResponse Object
      */
-    public EconomyResponse bankDeposit(String name, double amount);
+    public EconomyResponse bankDeposit(String name, BigDecimal amount);
     
     /**
      * @deprecated As of VaultAPI 1.4 use {{@link #isBankOwner(String, OfflinePlayer)} instead.
