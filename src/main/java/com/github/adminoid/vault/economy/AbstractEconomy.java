@@ -42,22 +42,22 @@ public abstract class AbstractEconomy implements Economy {
 	}
 
 	@Override
-	public EconomyResponse withdrawPlayer(OfflinePlayer player, double amount) {
+	public EconomyResponse withdrawPlayer(OfflinePlayer player, BigDecimal amount) {
 		return withdrawPlayer(player.getName(), amount);
 	}
 
 	@Override
-	public EconomyResponse withdrawPlayer(OfflinePlayer player, String worldName, double amount) {
+	public EconomyResponse withdrawPlayer(OfflinePlayer player, String worldName, BigDecimal amount) {
 		return withdrawPlayer(player.getName(), worldName, amount);
 	}
 
 	@Override
-	public EconomyResponse depositPlayer(OfflinePlayer player, double amount) {
+	public EconomyResponse depositPlayer(OfflinePlayer player, BigDecimal amount) {
 		return depositPlayer(player.getName(), amount);
 	}
 
 	@Override
-	public EconomyResponse depositPlayer(OfflinePlayer player, String worldName, double amount) {
+	public EconomyResponse depositPlayer(OfflinePlayer player, String worldName, BigDecimal amount) {
 		return depositPlayer(player.getName(), worldName, amount);
 	}
 
