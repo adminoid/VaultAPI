@@ -2,6 +2,8 @@ package net.milkbowl.vault.economy;
 
 import org.bukkit.OfflinePlayer;
 
+import java.math.BigDecimal;
+
 @SuppressWarnings("deprecation")
 public abstract class AbstractEconomy implements Economy {
 
@@ -18,12 +20,12 @@ public abstract class AbstractEconomy implements Economy {
 	}
 
 	@Override
-	public double getBalance(OfflinePlayer player) {
+	public BigDecimal getBalance(OfflinePlayer player) {
 		return getBalance(player.getName());
 	}
 
 	@Override
-	public double getBalance(OfflinePlayer player, String world) {
+	public BigDecimal getBalance(OfflinePlayer player, String world) {
 		return getBalance(player.getName(), world);
 	}
 

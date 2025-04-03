@@ -16,6 +16,7 @@
 
 package net.milkbowl.vault.economy;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.bukkit.OfflinePlayer;
@@ -116,7 +117,7 @@ public interface Economy {
      * @deprecated As of VaultAPI 1.4 use {@link #getBalance(OfflinePlayer)} instead.
      */
     @Deprecated
-    public double getBalance(String playerName);
+    public BigDecimal getBalance(String playerName);
     
     /**
      * Gets balance of a player
@@ -124,13 +125,13 @@ public interface Economy {
      * @param player of the player
      * @return Amount currently held in players account
      */
-    public double getBalance(OfflinePlayer player);
+    public BigDecimal getBalance(OfflinePlayer player);
 
     /**
      * @deprecated As of VaultAPI 1.4 use {@link #getBalance(OfflinePlayer, String)} instead.
      */
     @Deprecated
-    public double getBalance(String playerName, String world);
+    public BigDecimal getBalance(String playerName, String world);
     
     /**
      * Gets balance of a player on the specified world.
@@ -139,7 +140,7 @@ public interface Economy {
      * @param world name of the world
      * @return Amount currently held in players account
      */
-    public double getBalance(OfflinePlayer player, String world);
+    public BigDecimal getBalance(OfflinePlayer player, String world);
     
     /**
      * @deprecated As of VaultAPI 1.4 use {@link #has(OfflinePlayer, double)} instead.
