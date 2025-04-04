@@ -16,6 +16,7 @@
 
 package net.milkbowl.vault.economy;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.bukkit.OfflinePlayer;
@@ -116,7 +117,7 @@ public interface Economy {
      * @deprecated As of VaultAPI 1.4 use {@link #getBalance(OfflinePlayer)} instead.
      */
     @Deprecated
-    public double getBalance(String playerName);
+    public BigDecimal getBalance(String playerName);
     
     /**
      * Gets balance of a player
@@ -124,13 +125,13 @@ public interface Economy {
      * @param player of the player
      * @return Amount currently held in players account
      */
-    public double getBalance(OfflinePlayer player);
+    public BigDecimal getBalance(OfflinePlayer player);
 
     /**
      * @deprecated As of VaultAPI 1.4 use {@link #getBalance(OfflinePlayer, String)} instead.
      */
     @Deprecated
-    public double getBalance(String playerName, String world);
+    public BigDecimal getBalance(String playerName, String world);
     
     /**
      * Gets balance of a player on the specified world.
@@ -139,7 +140,7 @@ public interface Economy {
      * @param world name of the world
      * @return Amount currently held in players account
      */
-    public double getBalance(OfflinePlayer player, String world);
+    public BigDecimal getBalance(OfflinePlayer player, String world);
     
     /**
      * @deprecated As of VaultAPI 1.4 use {@link #has(OfflinePlayer, double)} instead.
@@ -174,10 +175,10 @@ public interface Economy {
     public boolean has(OfflinePlayer player, String worldName, double amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, BigDecimal)} instead.
      */
     @Deprecated
-    public EconomyResponse withdrawPlayer(String playerName, double amount);
+    public EconomyResponse withdrawPlayer(String playerName, BigDecimal amount);
 
     /**
      * Withdraw an amount from a player - DO NOT USE NEGATIVE AMOUNTS
@@ -186,13 +187,13 @@ public interface Economy {
      * @param amount Amount to withdraw
      * @return Detailed response of transaction
      */
-    public EconomyResponse withdrawPlayer(OfflinePlayer player, double amount);
+    public EconomyResponse withdrawPlayer(OfflinePlayer player, BigDecimal amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, String, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, String, BigDecimal)} instead.
      */
     @Deprecated
-    public EconomyResponse withdrawPlayer(String playerName, String worldName, double amount);
+    public EconomyResponse withdrawPlayer(String playerName, String worldName, BigDecimal amount);
     
     /**
      * Withdraw an amount from a player on a given world - DO NOT USE NEGATIVE AMOUNTS
@@ -202,13 +203,13 @@ public interface Economy {
      * @param amount Amount to withdraw
      * @return Detailed response of transaction
      */
-    public EconomyResponse withdrawPlayer(OfflinePlayer player, String worldName, double amount);
+    public EconomyResponse withdrawPlayer(OfflinePlayer player, String worldName, BigDecimal amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #depositPlayer(OfflinePlayer, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #depositPlayer(OfflinePlayer, BigDecimal)} instead.
      */
     @Deprecated
-    public EconomyResponse depositPlayer(String playerName, double amount);
+    public EconomyResponse depositPlayer(String playerName, BigDecimal amount);
 
     /**
      * Deposit an amount to a player - DO NOT USE NEGATIVE AMOUNTS
@@ -217,13 +218,13 @@ public interface Economy {
      * @param amount Amount to deposit
      * @return Detailed response of transaction
      */
-    public EconomyResponse depositPlayer(OfflinePlayer player, double amount);
+    public EconomyResponse depositPlayer(OfflinePlayer player, BigDecimal amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #depositPlayer(OfflinePlayer, String, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #depositPlayer(OfflinePlayer, String, BigDecimal)} instead.
      */
     @Deprecated
-    public EconomyResponse depositPlayer(String playerName, String worldName, double amount);
+    public EconomyResponse depositPlayer(String playerName, String worldName, BigDecimal amount);
    
     /**
      * Deposit an amount to a player - DO NOT USE NEGATIVE AMOUNTS
@@ -234,7 +235,7 @@ public interface Economy {
      * @param amount Amount to deposit
      * @return Detailed response of transaction
      */
-    public EconomyResponse depositPlayer(OfflinePlayer player, String worldName, double amount);
+    public EconomyResponse depositPlayer(OfflinePlayer player, String worldName, BigDecimal amount);
 
     /**
      * @deprecated As of VaultAPI 1.4 use {{@link #createBank(String, OfflinePlayer)} instead.
