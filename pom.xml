@@ -19,24 +19,24 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 
 	<!-- Organization -->
 	<organization>
-		<name>MilkBowl</name>
-		<url>https://github.com/MilkBowl</url>
+		<name>adminoid</name>
+		<url>https://github.com/adminoid</url>
 	</organization>
 
 	<scm>
-		<url>https://github.com/MilkBowl/VaultAPI</url>
-		<connection>scm:git:git://github.com:MilkBowl/VaultAPI.git</connection>
-		<developerConnection>scm:git:git@github.com:MilkBowl/VaultAPI.git</developerConnection>
+		<url>https://github.com/adminoid/VaultAPI</url>
+		<connection>scm:git:git://github.com:adminoid/VaultAPI.git</connection>
+		<developerConnection>scm:git:git@github.com:adminoid/VaultAPI.git</developerConnection>
 	</scm>
 
 	<ciManagement>
 		<system>Travis-CI</system>
-		<url>https://travis-ci.org/MilkBowl/VaultAPI</url>
+		<url>https://travis-ci.org/adminoid/VaultAPI</url>
 	</ciManagement>
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/MilkBowl/VaultAPI/issues</url>
+		<url>https://github.com/adminoid/VaultAPI/issues</url>
 	</issueManagement>
 
 	<repositories>
@@ -50,7 +50,7 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
  		<repository>
       		<id>github</id>
       		<name>GitHub Packages</name>
-      		<url>https://maven.pkg.github.com/milkbowl/github-releases</url>
+      		<url>https://maven.pkg.github.com/adminoid/github-releases</url>
     	</repository>
 	</distributionManagement>
 
