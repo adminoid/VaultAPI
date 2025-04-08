@@ -60,7 +60,7 @@ public interface Economy {
      * @param amount to format
      * @return Human readable string describing amount
      */
-    public String format(double amount);
+    public String format(BigDecimal amount);
 
     /**
      * Returns the name of the currency in plural form.
@@ -143,10 +143,10 @@ public interface Economy {
     public BigDecimal getBalance(OfflinePlayer player, String world);
     
     /**
-     * @deprecated As of VaultAPI 1.4 use {@link #has(OfflinePlayer, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use {@link #has(OfflinePlayer, BigDecimal)} instead.
      */
     @Deprecated
-    public boolean has(String playerName, double amount);
+    public boolean has(String playerName, BigDecimal amount);
     
     /**
      * Checks if the player account has the amount - DO NOT USE NEGATIVE AMOUNTS
@@ -155,13 +155,13 @@ public interface Economy {
      * @param amount to check for
      * @return True if <b>player</b> has <b>amount</b>, False else wise
      */
-    public boolean has(OfflinePlayer player, double amount);
+    public boolean has(OfflinePlayer player, BigDecimal amount);
 
     /**
-     * @deprecated As of VaultAPI 1.4 use @{link {@link #has(OfflinePlayer, String, double)} instead.
+     * @deprecated As of VaultAPI 1.4 use @{link {@link #has(OfflinePlayer, String, BigDecimal)} instead.
      */
     @Deprecated
-    public boolean has(String playerName, String worldName, double amount);
+    public boolean has(String playerName, String worldName, BigDecimal amount);
     
     /**
      * Checks if the player account has the amount in a given world - DO NOT USE NEGATIVE AMOUNTS
@@ -172,7 +172,7 @@ public interface Economy {
      * @param amount to check for
      * @return True if <b>player</b> has <b>amount</b>, False else wise
      */
-    public boolean has(OfflinePlayer player, String worldName, double amount);
+    public boolean has(OfflinePlayer player, String worldName, BigDecimal amount);
 
     /**
      * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, BigDecimal)} instead.
@@ -272,7 +272,7 @@ public interface Economy {
      * @param amount to check for
      * @return EconomyResponse Object
      */
-    public EconomyResponse bankHas(String name, double amount);
+    public EconomyResponse bankHas(String name, BigDecimal amount);
 
     /**
      * Withdraw an amount from a bank account - DO NOT USE NEGATIVE AMOUNTS
@@ -281,7 +281,7 @@ public interface Economy {
      * @param amount to withdraw
      * @return EconomyResponse Object
      */
-    public EconomyResponse bankWithdraw(String name, double amount);
+    public EconomyResponse bankWithdraw(String name, BigDecimal amount);
 
     /**
      * Deposit an amount into a bank account - DO NOT USE NEGATIVE AMOUNTS
@@ -290,7 +290,7 @@ public interface Economy {
      * @param amount to deposit
      * @return EconomyResponse Object
      */
-    public EconomyResponse bankDeposit(String name, double amount);
+    public EconomyResponse bankDeposit(String name, BigDecimal amount);
     
     /**
      * @deprecated As of VaultAPI 1.4 use {{@link #isBankOwner(String, OfflinePlayer)} instead.
