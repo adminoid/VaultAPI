@@ -15,6 +15,8 @@
  */
 package com.github.adminoid.vault.economy;
 
+import java.math.BigDecimal;
+
 /**
  * Indicates a typical Return for an Economy method.  
  * It includes a {@link ResponseType} indicating whether the plugin currently being used for Economy actually allows
@@ -45,11 +47,11 @@ public class EconomyResponse {
     /**
      * Amount modified by calling method
      */
-    public final double amount;
+    public final BigDecimal amount;
     /**
      * New balance of account
      */
-    public final double balance;
+    public final BigDecimal balance;
     /**
      * Success or failure of call. Using Enum of ResponseType to determine valid
      * outcomes
@@ -67,7 +69,7 @@ public class EconomyResponse {
      * @param type Success or failure type of the operation
      * @param errorMessage Error message if necessary (commonly null)
      */
-    public EconomyResponse(double amount, double balance, ResponseType type, String errorMessage) {
+    public EconomyResponse(BigDecimal amount, BigDecimal balance, ResponseType type, String errorMessage) {
         this.amount = amount;
         this.balance = balance;
         this.type = type;

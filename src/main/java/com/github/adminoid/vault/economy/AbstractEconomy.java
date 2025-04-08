@@ -30,13 +30,13 @@ public abstract class AbstractEconomy implements Economy {
 	}
 
 	@Override
-	public boolean has(OfflinePlayer player, double amount) {
+	public boolean has(OfflinePlayer player, BigDecimal amount) {
 		if (player.getName() == null) return false;
 		return has(player.getName(), amount);
 	}
 
 	@Override
-	public boolean has(OfflinePlayer player, String worldName, double amount) {
+	public boolean has(OfflinePlayer player, String worldName, BigDecimal amount) {
 		if (player.getName() == null) return false;
 		return has(player.getName(), worldName, amount);
 	}
